@@ -357,20 +357,21 @@ main {
   gap: calc(1.5 * var(--font-size-base));
 }
 
-.experience__tasks {
-  list-style-position: inside;
-}
-
 .experience__job-title {
   font-size: calc(1.5 * var(--font-size-base));
   font-weight: 400;
 }
 
 .experience__tasks {
+  list-style-position: inside;
   margin-top: calc(1 * var(--font-size-base));
   display: flex;
   flex-direction: column;
   gap: 0.5em;
+}
+
+.experience__task:hover i {
+  color: var(--color-green-1);
 }
 
 #projects .section__content {
