@@ -13,8 +13,36 @@
   --font-size-base: 1.6rem;
   /* Widths */
   --full-width: 104rem;
+  scrollbar-base-color: var(--color-black-1);
+  scrollbar-color: var(--color-grey-1) var(--color-black-1);
 }
 
+html::-webkit-scrollbar-thumb {
+  background-color: var(--color-grey-1);
+  border-radius: 16px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-grey-1);
+  border-radius: 16px;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: var(--color-black-1);
+}
+
+html::-webkit-scrollbar-track:hover {
+  background-color: var(--color-black-1);
+}
+
+html::-webkit-scrollbar-button {
+  visibility: none;
+}
+
+html::-webkit-scrollbar {
+  width: 2em;
+  height: 1em;
+}
 *,
 *::after,
 *::before {
@@ -343,6 +371,79 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
+}
+
+#projects .section__content {
+  list-style: none;
+  display: flex;
+  gap: var(--font-size-base);
+  overflow-x: scroll;
+}
+
+.project-container {
+  padding: 1em;
+  border-radius: 0.3em;
+  transition: background-color 0.2s ease-in-out;
+  margin-bottom: 1em;
+}
+
+.project-container:hover {
+  cursor: pointer;
+  background-color: var(--color-grey-2);
+}
+
+.project {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.project__image-container {
+  width: clamp(16rem, 40vw, 20rem);
+  border-radius: 0.5em;
+  overflow: hidden;
+  position: relative;
+}
+
+.project__image {
+  display: block;
+  width: 100%;
+}
+
+.project__text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.project__title {
+  margin-top: 1em;
+  flex: 1;
+}
+
+.project__button {
+  right: 1em;
+  bottom: 0;
+  font-size: calc(1.1 * var(--font-size-base));
+  position: absolute;
+  background-color: var(--color-green-2);
+  border: 1px solid var(--color-green-2);
+  border-radius: 50%;
+  padding: 1em;
+  transition: all 0.2s ease-in-out;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  opacity: 0;
+}
+
+.project-container:hover .project__button {
+  transform: translateY(-1em);
+  opacity: 1;
+}
+
+.project__button:hover,
+.project__button:active {
+  cursor: pointer;
+  background-color: var(--color-green-1);
+  border: 1px solid var(--color-green-1);
 }
 
 /* 920px */
