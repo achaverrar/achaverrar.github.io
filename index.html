@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,31 +10,287 @@
       type="image/x-icon"
     />
     <meta name="author" content="Ayxa Chaverra Rentería" />
-    <meta name="language" content="english" />
+    <meta name="language" content="spanish" />
     <meta
       name="description"
-      content="Final course project for the first module in the Fullstack con JavaScript program by Desafío Latam"
+      content="Proyecto final del primer módulo del programa Fullstack con JavaScript program de Desafío Latam"
     />
-    <meta name="og:title" content="Iguanas" />
+    <meta name="og:title" content="Ayxa Chaverra Rentería" />
     <meta
       name="og:description"
-      content="Final course project for the first module in the Fullstack con JavaScript program by Desafío Latam"
+      content="Proyecto final del primer módulo del programa Fullstack con JavaScript program de Desafío Latam"
     />
     <meta name="og:image" content="./assets/imgs/og-image.jpg" />
+    <!-- Fuente externa -->
+    <link rel="stylesheet" href="./assets/css/fonts.css" />
+    <!-- Estilos propios -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Ayxa Chaverra Rentería</title>
   </head>
   <body>
-    <header>
-      Header
-      <nav>Navbar</nav>
-    </header>
-    <main>
-      <section>Summary</section>
-      <section>Experience</section>
-      <section>Education</section>
-      <section>Contact Me</section>
-    </main>
-    <footer>Footer</footer>
+    <div class="container">
+      <header class="header">
+        <h1 class="header__title">Ayxa Chaverra R.</h1>
+        <nav class="nav">
+          <a href="#projects" class="nav__item nav__link--main">Portafolio</a>
+          <button class="nav__button">Toggler</button>
+          <ul class="nav__items">
+            <li class="nav__item">
+              <a href="#education" class="nav__link">Educación</a>
+            </li>
+            <li class="nav__item">
+              <a href="#experiences" class="nav__link">Experiencia</a>
+            </li>
+            <li class="nav__item">
+              <a href="#references" class="nav__link">Referencias</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact-me" class="nav__link">Contáctame</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <div class="section--top">
+          <div class="subsection--long">
+            <section id="education">
+              <h2 class="section__title">Educación</h2>
+              <ul class="education__items">
+                <li class="education__item-container">
+                  <article class="education__item">
+                    <h3 class="education__institution">
+                      Academia Desafío Latam
+                    </h3>
+                    <p class="education__degree">Fullstack con JavaScript</p>
+                    <span class="education__year">Abril 2024</span>
+                  </article>
+                </li>
+                <li class="education__item-container">
+                  <article class="education__item">
+                    <h3 class="education__institution">Oracle & Alura Latam</h3>
+                    <p class="education__degree">
+                      Formación en Backend con Java
+                    </p>
+                    <span class="education__year">Junio 2023</span>
+                  </article>
+                </li>
+                <li class="education__item-container">
+                  <article class="education__item">
+                    <h3 class="education__institution">Meta</h3>
+                    <p class="education__degree">
+                      Frontend Developer Professional Certificate
+                    </p>
+                    <span class="education__year">Mayo 2023</span>
+                  </article>
+                </li>
+              </ul>
+            </section>
+            <section id="experiences">
+              <h2 class="section__title">Experiencia</h2>
+              <ul class="experiences__list">
+                <li class="experience-container">
+                  <article class="experience">
+                    <div class="experience-header">
+                      <h3 class="experience__title">
+                        <span class="experience__company"
+                          >Grupo de Investigación en Física Médica UNAL
+                        </span>
+                        <span class="experience__job-title"
+                          >Traductora y Editora</span
+                        >
+                      </h3>
+                      <span class="experience__context"
+                        >2019-2020 | Bogotá</span
+                      >
+                    </div>
+                    <ul class="experience__tasks">
+                      <li class="experience__task">
+                        Traduje al inglés los artículos del grupo de
+                        investigación.
+                      </li>
+                      <li class="experience__task">
+                        Edité los artículos de acuerdo a los lineamientos de las
+                        revistas científicas.
+                      </li>
+                      <li class="experience__task">
+                        Hice seguimiento de los artículos enviados y publicados.
+                      </li>
+                      <li class="experience__task">
+                        Analicé las revistas, sus requerimientos e hice
+                        sugerencias para las siguientes publicaciones.
+                      </li>
+                      <li class="experience__task">
+                        Estuve a cargo de la publicidad en redes sociales para
+                        los eventos del grupo de investigación.
+                      </li>
+                    </ul>
+                  </article>
+                </li>
+                <li class="experience-container">
+                  <article class="experience">
+                    <div class="experience-header">
+                      <h3 class="experience__title">
+                        <span class="experience__company"
+                          >Youth Colombian Leaders (Voluntariado)
+                        </span>
+                        <span class="experience__job-title"
+                          >Coordinadora Regional y Profesora de Inglés</span
+                        >
+                      </h3>
+                      <span class="experience__context"
+                        >2014-2017 | Quibdó, Medellín, Bogotá</span
+                      >
+                    </div>
+                    <ul class="experience__tasks">
+                      <li class="experience__task">
+                        Cofundé la primera sede del programa nacional PLAYLEE
+                        (PLAYing and LEarning English) de alfabetización en
+                        inglés a niños de escasos recursos en mi ciudad.
+                      </li>
+                      <li class="experience__task">
+                        Lideré las reuniones con los padres de familia y los
+                        procesos de selección de los estudiantes.
+                      </li>
+                      <li class="experience__task">
+                        Redacté parte de la documentación oficial que se usó en
+                        el programa a nivel nacional.
+                      </li>
+                      <li class="experience__task">
+                        Impulsé la campaña de publicidad que nos consiguió un
+                        grant del Departamento de Estado de los Estados Unidos
+                        para pagar gastos a nivel nacional.
+                      </li>
+                      <li class="experience__task">
+                        Impulsé la campaña de publicidad que nos consiguió un
+                        una beca de la OEA.
+                      </li>
+                      <li class="experience__task">
+                        Preparé material didáctico, impartí clases y apoyé el
+                        programa en tres ciudades diferentes.
+                      </li>
+                    </ul>
+                  </article>
+                </li>
+              </ul>
+            </section>
+          </div>
+          <div class="subsection--short">
+            <section id="technologies">
+              <h2 class="section__title">Tecnologías</h2>
+              <ul class="technologies__list">
+                <li class="technologies__list-item">HTML</li>
+                <li class="technologies__list-item">CSS</li>
+                <li class="technologies__list-item">Sass</li>
+                <li class="technologies__list-item">Bootstrap</li>
+                <li class="technologies__list-item">JavaScript</li>
+                <li class="technologies__list-item">React.js</li>
+                <li class="technologies__list-item">Java</li>
+                <li class="technologies__list-item">Spring</li>
+                <li class="technologies__list-item">MySQL</li>
+                <li class="technologies__list-item">Git</li>
+                <li class="technologies__list-item">GitHub</li>
+                <li class="technologies__list-item">Figma</li>
+              </ul>
+            </section>
+            <section id="languages">
+              <h2 class="section__title">Idiomas</h2>
+              <ul class="languages__list">
+                <li class="languages__list-item">Español (Nativo)</li>
+                <li class="languages__list-item">
+                  Inglés (Intermedio-Avanzado)
+                </li>
+              </ul>
+            </section>
+            <section id="contact-me">
+              <h2 class="section__title">Contáctame</h2>
+              <ul class="socials__list">
+                <li class="social">
+                  <span class="social__icon">Ícono</span
+                  ><a href="https://www.github.com/achaverrar"
+                    >github.com/achaverrar</a
+                  >
+                </li>
+                <li class="social">
+                  <span class="social__icon">Ícono</span>
+                  <a href="mailto:achaverrar@gmail.com">achaverrar@gmail.com</a>
+                </li>
+                <li class="social">
+                  <span class="social__icon">Ícono</span>
+                  <a href="https://www.linkedin.com/in/ayxa-chaverra-renteria/"
+                    >linkedin.com/in/ayxa-chaverra-renteria/</a
+                  >
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+        <div class="section--bottom" id="references">
+          <section id="projects">
+            <h2 class="section__title">Proyectos</h2>
+            <ul class="projects__list">
+              <li class="project-container">
+                <article class="project">
+                  <div class="project__image">Imagen</div>
+                  <div class="project__text">
+                    <h3 class="project__title">Título</h3>
+                    <p class="project__description">Descripción</p>
+                  </div>
+                  <button class="project__button">Button</button>
+                </article>
+              </li>
+              <li class="project-container">
+                <article class="project">
+                  <div class="project__image">Imagen</div>
+                  <div class="project__text">
+                    <h3 class="project__title">Título</h3>
+                    <p class="project__description">Descripción</p>
+                  </div>
+                  <button class="project__button">Button</button>
+                </article>
+              </li>
+              <li class="project-container">
+                <article class="project">
+                  <div class="project__image">Imagen</div>
+                  <div class="project__text">
+                    <h3 class="project__title">Título</h3>
+                    <p class="project__description">Descripción</p>
+                  </div>
+                  <button class="project__button">Button</button>
+                </article>
+              </li>
+              <li class="project-container">
+                <article class="project">
+                  <div class="project__image">Imagen</div>
+                  <div class="project__text">
+                    <h3 class="project__title">Título</h3>
+                    <p class="project__description">Descripción</p>
+                  </div>
+                  <button class="project__button">Button</button>
+                </article>
+              </li>
+            </ul>
+          </section>
+          <section id="references">
+            <h2 class="section__title">Referencias</h2>
+            <ul class="references__list">
+              <li class="reference">
+                <h3 class="reference__name">Nombre</h3>
+                <p class="reference__job">Cargo</p>
+                <a href="#" class="reference__contact-info">LinkedIn</a>
+              </li>
+              <li class="reference">
+                <h3 class="reference__name">Nombre</h3>
+                <p class="reference__job">Cargo</p>
+                <a href="#" class="reference__contact-info">LinkedIn</a>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </main>
+      <footer class="footer">
+        <small class="footer__attribution">Ayxa Chaverra R. &copy; 2023</small>
+        <small>Hecho con ❤️</small>
+      </footer>
+    </div>
   </body>
 </html>
