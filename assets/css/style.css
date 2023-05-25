@@ -470,7 +470,12 @@ main {
   .nav__items {
     flex-direction: row;
     width: fit-content;
-    justify-self: end;
+    height: min-content;
+    opacity: 1;
+  }
+
+  #toggler:checked + .nav__items {
+    height: min-content;
   }
 
   .nav__link--secondary {
