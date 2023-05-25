@@ -278,11 +278,6 @@ main {
   text-decoration: none;
 }
 
-.social__link:hover,
-.social__link:active {
-  color: var(--color-green-1);
-}
-
 #education .section__content {
   list-style: none;
   display: flex;
