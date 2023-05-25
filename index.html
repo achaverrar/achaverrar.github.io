@@ -21,6 +21,11 @@
       content="Proyecto final del primer módulo del programa Fullstack con JavaScript program de Desafío Latam"
     />
     <meta name="og:image" content="./assets/imgs/og-image.jpg" />
+    <!-- Iconos -->
+    <script
+      src="https://kit.fontawesome.com/95a1b338d7.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Fuente externa -->
     <link rel="stylesheet" href="./assets/css/fonts.css" />
     <!-- Estilos propios -->
@@ -32,8 +37,11 @@
       <header class="header">
         <h1 class="header__title">Ayxa Chaverra R.</h1>
         <nav class="nav">
-          <a href="#projects" class="nav__item nav__link--main">Portafolio</a>
-          <button class="nav__button">Toggler</button>
+          <a href="#projects" class="nav__link nav__link--main">Portafolio</a>
+          <label for="toggler" class="nav__button"
+            ><i class="fa-solid fa-ellipsis-vertical fa-lg"></i
+          ></label>
+          <input type="checkbox" name="toggler" id="toggler" />
           <ul class="nav__items">
             <li class="nav__item">
               <a href="#education" class="nav__link">Educación</a>
