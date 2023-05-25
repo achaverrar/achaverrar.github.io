@@ -380,47 +380,51 @@ main {
   overflow-x: scroll;
 }
 
-.project-container {
+.card-container {
   padding: 1em;
   border-radius: 0.3em;
   transition: background-color 0.2s ease-in-out;
   margin-bottom: 1em;
 }
 
-.project-container:hover {
+.card-container:hover {
   cursor: pointer;
   background-color: var(--color-grey-2);
 }
 
-.project {
+.card {
   height: 100%;
   display: flex;
   flex-direction: column;
 }
-.project__image-container {
-  width: clamp(16rem, 40vw, 20rem);
+
+.card__image-container {
   border-radius: 0.5em;
   overflow: hidden;
   position: relative;
 }
 
-.project__image {
+.projects .card__image-container {
+  width: clamp(16rem, 40vw, 20rem);
+}
+
+.card__image {
   display: block;
   width: 100%;
 }
 
-.project__text {
+.card__text {
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
-.project__title {
+.card__title {
   margin-top: 1em;
   flex: 1;
 }
 
-.project__button {
+.card__button {
   right: 1em;
   bottom: 0;
   font-size: calc(1.1 * var(--font-size-base));
@@ -434,13 +438,13 @@ main {
   opacity: 0;
 }
 
-.project-container:hover .project__button {
+.card-container:hover .card__button {
   transform: translateY(-1em);
   opacity: 1;
 }
 
-.project__button:hover,
-.project__button:active {
+.card__button:hover,
+.card__button:active {
   cursor: pointer;
   background-color: var(--color-green-1);
   border: 1px solid var(--color-green-1);
