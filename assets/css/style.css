@@ -1,0 +1,60 @@
+:root {
+  /* Colors */
+  --color-black-1: #121212;
+  --color-black-2: #000000;
+  --color-white-1: #ffffff;
+  --color-white-2: #f6f6f6;
+  --color-green-1: #1fdf64;
+  --color-green-2: #1ed760;
+  --color-grey-1: #a7a7a7;
+  --color-grey-2: #535353;
+  /* Fonts */
+  --font-family-default: "Circular Std", Helvetica, Arial, sans-serif;
+  --font-size-base: 1.6rem;
+  /* Widths */
+  --full-width: 104rem;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background-color: var(--color-grey-1);
+  color: var(--color-black-2);
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: var(--font-family-default);
+}
+
+body {
+  min-height: 100vh;
+  font-size: var(--font-size-base);
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    to bottom right,
+    var(--color-grey-2),
+    var(--color-black-1)
+  );
+  color: var(--color-white-1);
+}
+
+main {
+  flex: 1;
+}
+
+.container {
+  margin: auto;
+  width: 100%;
+  max-width: var(--full-width);
+  padding: calc(1.5 * var(--font-size-base)) var(--font-size-base);
+}
