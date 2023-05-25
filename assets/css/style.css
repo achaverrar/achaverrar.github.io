@@ -291,7 +291,7 @@ main {
   max-height: 8rem;
 }
 
-.education__institution {
+.subsection__title {
   font-size: calc(1.5 * var(--font-size-base));
   font-weight: 700;
 }
@@ -301,10 +301,10 @@ main {
   font-weight: 500;
 }
 
-.education__year {
+.section__tag {
   text-transform: uppercase;
-  color: var(--color-white-2);
-  font-weight: 400;
+  color: var(--color-grey-1);
+  font-weight: 500;
 }
 
 .education__description {
@@ -320,6 +320,29 @@ main {
 .education__item:hover .education__certificate-icon,
 .education__item:active .education__certificate-icon {
   color: var(--color-green-1);
+}
+
+#experiences .section__content {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: calc(1.5 * var(--font-size-base));
+}
+
+.experience__tasks {
+  list-style-position: inside;
+}
+
+.experience__job-title {
+  font-size: calc(1.5 * var(--font-size-base));
+  font-weight: 400;
+}
+
+.experience__tasks {
+  margin-top: calc(1 * var(--font-size-base));
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
 }
 
 /* 920px */
