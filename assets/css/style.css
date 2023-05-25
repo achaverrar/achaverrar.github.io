@@ -255,6 +255,73 @@ main {
   color: var(--color-green-1);
 }
 
+#education .section__content {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  max-width: fit-content;
+}
+
+.education__item-container {
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+
+.education__certificate-link {
+  text-decoration: none;
+  color: var(--color-white-1);
+}
+
+.education__item-container:hover,
+.education__item-container:active {
+  background-color: var(--color-grey-2);
+}
+
+.education__item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: start;
+  gap: 1em;
+  padding: 0.5em;
+}
+
+.education__item .education__logo {
+  border-radius: 0.25em;
+  max-height: 8rem;
+}
+
+.education__institution {
+  font-size: calc(1.5 * var(--font-size-base));
+  font-weight: 700;
+}
+
+.education__degree {
+  color: var(--color-white-2);
+  font-weight: 500;
+}
+
+.education__year {
+  text-transform: uppercase;
+  color: var(--color-white-2);
+  font-weight: 400;
+}
+
+.education__description {
+  flex-grow: 1;
+}
+
+.education__certificate-icon {
+  font-size: 2rem;
+  color: var(--color-grey-1);
+  margin-left: 0.25em;
+}
+
+.education__item:hover .education__certificate-icon,
+.education__item:active .education__certificate-icon {
+  color: var(--color-green-1);
+}
+
 /* 920px */
 @media (min-width: 57.5em) {
   .nav {
