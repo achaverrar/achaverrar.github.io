@@ -703,22 +703,6 @@ main {
     height: min-content;
   }
 
-  .nav__link--secondary {
-    color: var(--color-white-1);
-    border: 2px solid var(--color-grey-1);
-    transition: border 0.1s ease-in-out;
-  }
-
-  .nav__link--secondary:hover,
-  .nav__link--secondary:active {
-    background-color: var(--color-grey-2);
-    border: 2px solid var(--color-white-2);
-  }
-
-  .nav__link--secondary::after {
-    display: none;
-  }
-
   .section--top {
     flex-direction: row;
     justify-content: space-between;
@@ -737,5 +721,37 @@ main {
     grid-template-areas:
       "header header"
       "preview info";
+  }
+}
+
+/* ############ 3. Media Queries I ############ */
+
+@media (max-width: 57.5em) {
+  .nav__link {
+    color: var(--color-grey-1);
+    border: none;
+    position: relative;
+  }
+  .nav__link:hover,
+  .nav__link:active {
+    color: var(--color-white-1);
+    background-color: transparent;
+    transition: color 200ms ease-in-out;
+  }
+
+  .nav__link::after {
+    content: "";
+    position: absolute;
+    width: 33%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transform: translateX(100%) scale(0);
+    background-color: var(--color-white-2);
+    transition: transform 0.2s ease-in-out;
+  }
+  .nav__link:hover::after,
+  .nav__link:active::after {
+    transform: translateX(100%) scale(1);
   }
 }
