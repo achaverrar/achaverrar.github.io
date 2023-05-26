@@ -101,6 +101,7 @@ a {
   width: fit-content;
   color: inherit;
   font-size: inherit;
+  height: 100%;
 }
 
 p a {
@@ -144,38 +145,6 @@ main {
   padding: calc(1.5 * var(--font-size-base)) var(--font-size-base);
 }
 
-/* ############ 3. Media Queries I ############ */
-
-@media (max-width: 57.5em) {
-  .nav__link {
-    color: var(--color-grey-1);
-    border: none;
-    position: relative;
-  }
-  .nav__link:hover,
-  .nav__link:active {
-    color: var(--color-white-1);
-    background-color: transparent;
-    transition: color 200ms ease-in-out;
-  }
-
-  .nav__link::after {
-    content: "";
-    position: absolute;
-    width: 33%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    transform: translateX(100%) scale(0);
-    background-color: var(--color-white-2);
-    transition: transform 0.2s ease-in-out;
-  }
-  .nav__link:hover::after,
-  .nav__link:active::after {
-    transform: translateX(100%) scale(1);
-  }
-}
-
 /* ############ 4. Componentes ############ */
 .link {
   border-radius: 4em;
@@ -217,11 +186,15 @@ main {
 }
 
 /* Card */
+
+.new-card-container {
+  margin-bottom: 1em;
+}
+
 .new-card {
   cursor: pointer;
   border-radius: 0.25em;
   transition: background-color 0.2s ease-in-out;
-  margin-bottom: 1em;
 }
 
 .new-card:hover,
@@ -236,6 +209,7 @@ main {
   align-items: start;
   gap: 1em;
   width: 100%;
+  margin-bottom: 1em;
 }
 
 .new-card--vertical {
@@ -247,6 +221,9 @@ main {
 
 .new-card__image--rectangle {
   border-radius: 0.5em;
+}
+
+.new-card--horizontal .new-card__image--rectangle {
   max-height: 8rem;
 }
 
@@ -520,7 +497,8 @@ main {
   position: relative;
 }
 
-.projects .card__image-container {
+.projects .card__image-container,
+.projects .new-card__image-container {
   width: clamp(16rem, 40vw, 20rem);
 }
 
