@@ -3,17 +3,18 @@
 TABLA DE CONTENIDOS
   1. Variables Globales
   2. Reset
-  3. Componentes
-  4. Header
-  5. Educación
-  6. Experiencia
-  7. Tecnologías
-  8. Idiomas
-  9. Contáctame
-  10. Proyectos
-  11. Footer
-  12. PopUps
-  13. Responsive Design & Media Queries
+  3. Media Queries I
+  4. Componentes
+  5. Header
+  6. Educación
+  7. Experiencia
+  8. Tecnologías
+  9. Idiomas
+  10. Contáctame
+  11. Proyectos
+  12. Footer
+  13. PopUps
+  14. Responsive Design & Media Queries II
   */
 
 /* ############ 1. Variables Globales ############ */
@@ -143,14 +144,85 @@ main {
   padding: calc(1.5 * var(--font-size-base)) var(--font-size-base);
 }
 
-/* ############ 3. Componentes ############ */
+/* ############ 3. Media Queries I ############ */
+
+@media (max-width: 57.5em) {
+  .nav__link {
+    color: var(--color-grey-1);
+    border: none;
+    position: relative;
+  }
+  .nav__link:hover,
+  .nav__link:active {
+    color: var(--color-white-1);
+    background-color: transparent;
+    transition: color 200ms ease-in-out;
+  }
+
+  .nav__link::after {
+    content: "";
+    position: absolute;
+    width: 33%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transform: translateX(100%) scale(0);
+    background-color: var(--color-white-2);
+    transition: transform 0.2s ease-in-out;
+  }
+  .nav__link:hover::after,
+  .nav__link:active::after {
+    transform: translateX(100%) scale(1);
+  }
+}
+
+/* ############ 4. Componentes ############ */
+.link {
+  border-radius: 4em;
+  padding: 0.5em 1.25em;
+  text-transform: uppercase;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.link--primary {
+  border-color: var(--color-green-2);
+  background-color: var(--color-green-2);
+  font-weight: 500;
+  transition: transform 100ms ease-in-out;
+}
+
+.link--primary:hover,
+.link--primary:active {
+  border-color: var(--color-green-1);
+  background-color: var(--color-green-1);
+  transform: scale(1.05);
+}
+
+.link--secondary {
+  border-color: var(--color-grey-1);
+  transition: color 100ms ease-in-out;
+}
+
+.link--secondary:hover,
+.link--secondary:active {
+  background-color: var(--color-grey-2);
+  border-color: var(--color-white-2);
+}
+
+.link--disabled {
+  color: var(--color-grey-1);
+  border: 2px solid var(--color-grey-2);
+  cursor: not-allowed;
+}
+
 /* Button circular */
 /* Card */
 /* Card landscape */
 /* Card portrait */
 /* Card circular image */
 /* Sections */
-/* ############ 4. Header ############ */
+/* ############ 5. Header ############ */
 .banner__title {
   font-size: clamp(
     calc(2.5 * var(--font-size-base)),
@@ -207,59 +279,6 @@ main {
   height: 20.48rem;
   opacity: 1;
   visibility: visible;
-}
-
-.nav__link--main {
-  color: var(--color-white-1);
-  border: 2px solid var(--color-green-2);
-  background-color: var(--color-green-2);
-  font-weight: 500;
-  transition: all 0.1s ease-in-out;
-}
-
-.nav__link--main:hover,
-.nav__link--main:active {
-  color: var(--color-white-1);
-  border: 2px solid var(--color-green-1);
-  background-color: var(--color-green-1);
-  transform: scale(1.05);
-}
-
-.nav__link {
-  border-radius: 4em;
-  padding: 0.5em 1.25em;
-  width: fit-content;
-  text-transform: uppercase;
-  position: relative;
-  text-decoration: none;
-  display: block;
-}
-
-.nav__link--secondary {
-  color: var(--color-grey-1);
-  transition: color 0.2ms ease-in-out;
-}
-
-.nav__link--secondary:hover,
-.nav__link--secondary:active {
-  color: var(--color-white-1);
-}
-
-.nav__link--secondary::after {
-  content: "";
-  position: absolute;
-  width: 33%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  transform: translateX(100%) scale(0);
-  background-color: var(--color-white-2);
-  transition: transform 0.2s ease-in-out;
-}
-
-.nav__link--secondary:hover::after,
-.nav__link--secondary:active::after {
-  transform: translateX(100%) scale(1);
 }
 
 .section--top {
