@@ -454,17 +454,17 @@ main {
 }
 
 /* ############ 7. Tecnologías ############ */
-#technologies .section__content {
+.technologies .section__content {
   display: flex;
   flex-wrap: wrap;
 }
 
-#technologies li:first-of-type {
+.technologies__first-li {
   list-style: none;
 }
 
 /* ############ 8. Contáctame ############ */
-#contact-me .section__content {
+.contact-me .section__content {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -487,7 +487,7 @@ main {
 }
 
 /* ############ 9. Proyectos ############ */
-#projects .section__content {
+.projects .section__content {
   list-style: none;
   display: flex;
   gap: var(--font-size-base);
