@@ -290,6 +290,55 @@ main {
 }
 
 /* Sections */
+.section--top {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.section__title {
+  text-transform: uppercase;
+  font-weight: 500;
+  position: relative;
+  width: fit-content;
+  margin-top: calc(3.5 * var(--font-size-base));
+}
+
+.section__title::after {
+  content: "";
+  position: absolute;
+  width: 33%;
+  height: 2px;
+  bottom: -0.35em;
+  left: 0;
+  background-color: var(--color-green-1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.section:hover .section__title {
+  color: var(--color-green-1);
+}
+
+.section:hover .section__title::after {
+  transform: translateX(100%);
+}
+
+.section__content {
+  gap: 0 0.5em;
+  list-style-type: initial;
+  list-style-position: inside;
+  margin-top: calc(2 * var(--font-size-base));
+}
+
+.subsection__title {
+  font-size: calc(1.5 * var(--font-size-base));
+  font-weight: 700;
+}
+
+.section__tag {
+  text-transform: uppercase;
+  color: var(--color-grey-1);
+  font-weight: 500;
+}
 
 /* ############ 5. Header ############ */
 .banner__title {
@@ -348,44 +397,6 @@ main {
   height: 20.48rem;
   opacity: 1;
   visibility: visible;
-}
-
-.section--top {
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-.section__title {
-  text-transform: uppercase;
-  font-weight: 500;
-  position: relative;
-  width: fit-content;
-  margin-top: calc(3.5 * var(--font-size-base));
-}
-
-.section__title::after {
-  content: "";
-  position: absolute;
-  width: 33%;
-  height: 2px;
-  bottom: -0.35em;
-  left: 0;
-  background-color: var(--color-green-1);
-  transition: transform 0.2s ease-in-out;
-}
-
-.section:hover .section__title {
-  color: var(--color-green-1);
-}
-.section:hover .section__title::after {
-  transform: translateX(100%);
-}
-
-.section__content {
-  gap: 0 0.5em;
-  list-style-type: initial;
-  list-style-position: inside;
-  margin-top: calc(2 * var(--font-size-base));
 }
 
 #technologies .section__content {
@@ -449,17 +460,6 @@ main {
 .card:hover .education__certificate-icon,
 .card:active .education__certificate-icon {
   color: var(--color-green-1);
-}
-
-.subsection__title {
-  font-size: calc(1.5 * var(--font-size-base));
-  font-weight: 700;
-}
-
-.section__tag {
-  text-transform: uppercase;
-  color: var(--color-grey-1);
-  font-weight: 500;
 }
 
 #experiences .section__content {
