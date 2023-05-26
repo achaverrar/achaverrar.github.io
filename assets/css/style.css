@@ -3,18 +3,20 @@
 TABLA DE CONTENIDOS
   1. Variables Globales
   2. Reset
-  3. Media Queries I
-  4. Componentes
-  5. Header
-  6. Educación
-  7. Experiencia
-  8. Tecnologías
-  9. Idiomas
-  10. Contáctame
-  11. Proyectos
-  12. Footer
-  13. PopUps
-  14. Responsive Design & Media Queries II
+  3. Componentes
+    3.1 Links
+    3.2 Cards
+    3.3 Sections
+  4. Header
+  5. Educación
+  6. Experiencia
+  7. Tecnologías
+  8. Contáctame
+  9. Proyectos
+  10. Referencias
+  11. Footer
+  12. PopUps
+  13. Media Queries
   */
 
 /* ############ 1. Variables Globales ############ */
@@ -34,13 +36,6 @@ TABLA DE CONTENIDOS
   --font-weight-default: 400;
   /* Anchos */
   --full-width: 104rem;
-  /* Espacio */
-  /* Margin */
-  /* Padding */
-  /* Gap */
-  /* Transitions */
-  /* Border */
-  /* Border-radius */
 }
 
 /* ############ 2. Reset ############ */
@@ -145,8 +140,9 @@ main {
   padding: calc(1.5 * var(--font-size-base)) var(--font-size-base);
 }
 
-/* ############ 4. Componentes ############ */
-/* Links */
+/* ############ 3. Componentes ############ */
+
+/* ############ 3.1 Links ############ */
 .link {
   border-radius: 4em;
   padding: 0.5em 1.25em;
@@ -186,7 +182,7 @@ main {
   cursor: not-allowed;
 }
 
-/* Cards */
+/* ############ 3.2 Cards ############ */
 .card-container {
   margin-bottom: 1em;
 }
@@ -289,7 +285,7 @@ main {
   max-width: 18ch;
 }
 
-/* Sections */
+/* ############ 3.3 Sections ############ */
 .section--top {
   display: flex;
   flex-direction: column-reverse;
@@ -340,7 +336,7 @@ main {
   font-weight: 500;
 }
 
-/* ############ 5. Header ############ */
+/* ############ 4. Header ############ */
 .banner__title {
   font-size: clamp(
     calc(2.5 * var(--font-size-base)),
@@ -399,37 +395,7 @@ main {
   visibility: visible;
 }
 
-#technologies .section__content {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#technologies li:first-of-type {
-  list-style: none;
-}
-
-#contact-me .section__content {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: var(--font-size-base);
-}
-
-.social__link {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-}
-
-.social__icon {
-  font-size: 2em;
-  transition: color 0.2ms ease-in-out;
-}
-
-.social:hover .social__icon {
-  color: var(--color-green-1);
-}
-
+/* ############ 5. Educación ############ */
 #education .section__content {
   list-style: none;
   display: flex;
@@ -462,6 +428,7 @@ main {
   color: var(--color-green-1);
 }
 
+/* ############ 6. Experiencia ############ */
 #experiences .section__content {
   list-style: none;
   display: flex;
@@ -486,6 +453,40 @@ main {
   color: var(--color-green-1);
 }
 
+/* ############ 7. Tecnologías ############ */
+#technologies .section__content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#technologies li:first-of-type {
+  list-style: none;
+}
+
+/* ############ 8. Contáctame ############ */
+#contact-me .section__content {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--font-size-base);
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.social__icon {
+  font-size: 2em;
+  transition: color 0.2ms ease-in-out;
+}
+
+.social:hover .social__icon {
+  color: var(--color-green-1);
+}
+
+/* ############ 9. Proyectos ############ */
 #projects .section__content {
   list-style: none;
   display: flex;
@@ -493,12 +494,14 @@ main {
   overflow-x: scroll;
 }
 
+/* ############ 10. Referencias ############ */
 .references .section__content {
   list-style: none;
   display: flex;
   gap: var(--font-size-base);
 }
 
+/* ############ 11. Footer ############ */
 .footer {
   text-align: center;
   margin-top: calc(3.5 * var(--font-size-base));
@@ -510,6 +513,7 @@ main {
   display: block;
 }
 
+/* ############ 12. PopUps ############ */
 .popup {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.7);
@@ -643,6 +647,7 @@ main {
   gap: calc(0.5 * var(--font-size-base));
 }
 
+/* ############ 13. Media Queries ############ */
 /* 920px */
 @media (min-width: 57.5em) {
   .nav {
@@ -686,8 +691,7 @@ main {
   }
 }
 
-/* ############ 3. Media Queries I ############ */
-
+/* 920px */
 @media (max-width: 57.5em) {
   .nav__link {
     color: var(--color-grey-1);
