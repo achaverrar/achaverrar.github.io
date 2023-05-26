@@ -231,6 +231,13 @@ main {
   border-radius: 50%;
 }
 
+.new-card__image--small {
+  max-height: 8rem;
+}
+
+.new-card__image--big {
+  width: clamp(16rem, 40vw, 20rem);
+}
 .new-card__image-container {
   position: relative;
 }
@@ -549,19 +556,6 @@ main {
   list-style: none;
   display: flex;
   gap: var(--font-size-base);
-}
-
-.references .card__image-container {
-  width: clamp(16rem, 40vw, 20rem);
-  overflow: visible;
-}
-
-.references .card__image {
-  border-radius: 50%;
-}
-
-.references .card__button {
-  padding: 0.7em 0.4em;
 }
 
 .footer {
