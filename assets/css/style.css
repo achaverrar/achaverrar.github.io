@@ -246,7 +246,6 @@ main {
 }
 
 .new-card__image--rectangle {
-  /* o 0.25em */
   border-radius: 0.5em;
   max-height: 8rem;
 }
@@ -431,46 +430,12 @@ main {
   max-width: fit-content;
 }
 
-.education__item-container {
-  border-radius: 0.25em;
-  cursor: pointer;
-}
-
 .education__certificate-link {
-  color: var(--color-white-1);
-}
-
-.education__item-container:hover,
-.education__item-container:active {
-  background-color: var(--color-grey-2);
-}
-
-.education__item {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: start;
-  gap: 1em;
-  padding: 0.5em;
-}
-
-.education__item .education__logo {
-  border-radius: 0.25em;
-  max-height: 8rem;
-}
-
-.subsection__title {
-  font-size: calc(1.5 * var(--font-size-base));
-  font-weight: 700;
+  width: 100%;
 }
 
 .education__degree {
   color: var(--color-white-2);
-  font-weight: 500;
-}
-
-.section__tag {
-  text-transform: uppercase;
-  color: var(--color-grey-1);
   font-weight: 500;
 }
 
@@ -487,6 +452,17 @@ main {
 .education__item:hover .education__certificate-icon,
 .education__item:active .education__certificate-icon {
   color: var(--color-green-1);
+}
+
+.subsection__title {
+  font-size: calc(1.5 * var(--font-size-base));
+  font-weight: 700;
+}
+
+.section__tag {
+  text-transform: uppercase;
+  color: var(--color-grey-1);
+  font-weight: 500;
 }
 
 #experiences .section__content {
