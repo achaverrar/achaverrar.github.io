@@ -216,11 +216,84 @@ main {
   cursor: not-allowed;
 }
 
-/* Button circular */
 /* Card */
-/* Card landscape */
-/* Card portrait */
-/* Card circular image */
+.new-card {
+  cursor: pointer;
+  border-radius: 0.25em;
+  transition: background-color 0.2s ease-in-out;
+  margin-bottom: 1em;
+}
+
+.new-card:hover,
+.new-card:active {
+  background-color: var(--color-grey-2);
+}
+
+.new-card--horizontal {
+  padding: 0.5em;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: start;
+  gap: 1em;
+  width: 100%;
+}
+
+.new-card--vertical {
+  padding: 1em;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.new-card__image--rectangle {
+  /* o 0.25em */
+  border-radius: 0.5em;
+  max-height: 8rem;
+}
+
+.new-card__image--circle {
+  border-radius: 50%;
+}
+
+.new-card__image-container {
+  position: relative;
+}
+
+.new-card__button {
+  right: 1em;
+  bottom: 0;
+  font-size: calc(1.1 * var(--font-size-base));
+  position: absolute;
+  background-color: var(--color-green-2);
+  border: 1px solid var(--color-green-2);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.new-card__button:hover,
+.new-card__button:active {
+  background-color: var(--color-green-1);
+  border: 1px solid var(--color-green-1);
+}
+
+.new-card:hover .new-card__button {
+  transform: translateY(-1em);
+  opacity: 1;
+  visibility: visible;
+}
+
+.new-card__button--small {
+  padding: 1em 1.1em;
+}
+
+.new-card__button--big {
+  padding: 0.7em 0.4em;
+}
+
 /* Sections */
 /* ############ 5. Header ############ */
 .banner__title {
