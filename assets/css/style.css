@@ -681,32 +681,6 @@ main {
   gap: calc(0.5 * var(--font-size-base));
 }
 
-.popup__link {
-  text-transform: uppercase;
-  font-weight: 400;
-  padding: 0.5em 1.25em;
-  border-radius: 4em;
-  border: 2px solid var(--color-white-2);
-}
-
-.popup__link {
-  color: var(--color-white-1);
-  border: 2px solid var(--color-grey-1);
-  transition: border 0.1s ease-in-out;
-}
-
-.popup__link:hover,
-.popup__link:active {
-  background-color: var(--color-grey-2);
-  border: 2px solid var(--color-white-2);
-}
-
-.popup__link.popup__link--disabled {
-  color: var(--color-grey-1);
-  border: 2px solid var(--color-grey-2);
-  cursor: not-allowed;
-}
-
 /* 920px */
 @media (min-width: 57.5em) {
   .nav {
