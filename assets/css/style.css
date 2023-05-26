@@ -1,5 +1,24 @@
+/*
+
+TABLA DE CONTENIDOS
+  1. Variables Globales
+  2. Reset
+  3. Componentes
+  4. Header
+  5. Educación
+  6. Experiencia
+  7. Tecnologías
+  8. Idiomas
+  9. Contáctame
+  10. Proyectos
+  11. Footer
+  12. PopUps
+  13. Responsive Design & Media Queries
+  */
+
+/* ############ 1. Variables Globales ############ */
 :root {
-  /* Colors */
+  /* Colores */
   --color-black-1: #121212;
   --color-black-2: #000000;
   --color-white-1: #ffffff;
@@ -8,15 +27,46 @@
   --color-green-2: #1db954;
   --color-grey-1: #a7a7a7;
   --color-grey-2: #535353;
-  /* Fonts */
+  /* Fuentes */
   --font-family-default: "Circular Std", Helvetica, Arial, sans-serif;
   --font-size-base: 1.6rem;
-  /* Widths */
+  --font-weight-default: 400;
+  /* Anchos */
   --full-width: 104rem;
+  /* Espacio */
+  /* Margin */
+  /* Padding */
+  /* Gap */
+  /* Transitions */
+  /* Border */
+  /* Border-radius */
+}
+
+/* ############ 2. Reset ############ */
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background-color: var(--color-grey-1);
+  color: var(--color-black-2);
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: var(--font-family-default);
+  /* Scrollbar */
   scrollbar-base-color: var(--color-black-1);
   scrollbar-color: var(--color-grey-1) var(--color-black-1);
 }
 
+/* Scrollbar - Compatibilidad */
 html::-webkit-scrollbar-thumb {
   background-color: var(--color-grey-1);
   border-radius: 16px;
@@ -43,29 +93,34 @@ html::-webkit-scrollbar {
   width: 2em;
   height: 1em;
 }
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
+
+a {
+  display: block;
+  text-decoration: none;
+  width: fit-content;
+  color: inherit;
+  font-size: inherit;
 }
 
-::selection {
-  background-color: var(--color-grey-1);
-  color: var(--color-black-2);
+p a {
+  display: inline;
 }
 
-html {
-  scroll-behavior: smooth;
-  box-sizing: border-box;
-  font-size: 62.5%;
-  font-family: var(--font-family-default);
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+ul {
+  list-style: none;
 }
 
 body {
   min-height: 100vh;
   font-size: var(--font-size-base);
+  font-weight: var(--font-weight-default);
   display: flex;
   flex-direction: column;
   background: linear-gradient(
@@ -88,6 +143,14 @@ main {
   padding: calc(1.5 * var(--font-size-base)) var(--font-size-base);
 }
 
+/* ############ 3. Componentes ############ */
+/* Button circular */
+/* Card */
+/* Card landscape */
+/* Card portrait */
+/* Card circular image */
+/* Sections */
+/* ############ 4. Header ############ */
 .banner__title {
   font-size: clamp(
     calc(2.5 * var(--font-size-base)),
@@ -133,7 +196,6 @@ main {
   flex-direction: column;
   gap: 1em;
   width: 100%;
-  list-style: none;
   height: 0;
   opacity: 0;
   visibility: hidden;
@@ -233,6 +295,7 @@ main {
 
 .section__content {
   gap: 0 0.5em;
+  list-style-type: initial;
   list-style-position: inside;
   margin-top: calc(2 * var(--font-size-base));
 }
@@ -268,11 +331,6 @@ main {
   color: var(--color-green-1);
 }
 
-.social__link {
-  color: var(--color-white-1);
-  text-decoration: none;
-}
-
 #education .section__content {
   list-style: none;
   display: flex;
@@ -287,7 +345,6 @@ main {
 }
 
 .education__certificate-link {
-  text-decoration: none;
   color: var(--color-white-1);
 }
 
@@ -389,11 +446,6 @@ main {
   flex-direction: column;
 }
 
-.card__link {
-  color: inherit;
-  text-decoration: none;
-}
-
 .card__image-container {
   border-radius: 0.5em;
   overflow: hidden;
@@ -402,11 +454,6 @@ main {
 
 .projects .card__image-container {
   width: clamp(16rem, 40vw, 20rem);
-}
-
-.card__image {
-  display: block;
-  width: 100%;
 }
 
 .card__text {
@@ -456,11 +503,6 @@ main {
   list-style: none;
   display: flex;
   gap: var(--font-size-base);
-}
-
-.references__link {
-  color: var(--color-white-1);
-  text-decoration: none;
 }
 
 .references .card__image-container {
@@ -595,13 +637,6 @@ main {
   overflow-y: hidden;
 }
 
-.popup__media {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 #popup-comidas .popup__media {
   object-position: top center;
 }
@@ -629,14 +664,9 @@ main {
 
 .popup__link {
   text-transform: uppercase;
-  font-size: var(--font-size-base);
   font-weight: 400;
-  width: fit-content;
-  color: var(--color-white-2);
-  text-decoration: none;
   padding: 0.5em 1.25em;
   border-radius: 4em;
-  display: block;
   border: 2px solid var(--color-white-2);
 }
 
