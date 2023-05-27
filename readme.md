@@ -26,6 +26,7 @@ Recibí y acepté las pull requests de los siguientes compañeros:
 - [Matías Rojas](https://github.com/mattias914)
 - [Juan Lemus](https://github.com/achaverrar/JuanLemus07.github.io)
 - [Pedro Salinas](https://github.com/pesalinassilva)
+- [Valeria Escobar](https://github.com/Val393/Val393.github.io)
 
 ### Previsualización
 
