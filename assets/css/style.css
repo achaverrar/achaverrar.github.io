@@ -502,6 +502,9 @@ main {
   gap: var(--font-size-base);
 }
 
+.references .link {
+  height: min-content;
+}
 /* ############ 11. Footer ############ */
 .footer {
   text-align: center;
