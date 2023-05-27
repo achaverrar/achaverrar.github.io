@@ -498,6 +498,7 @@ main {
 .references .section__content {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: var(--font-size-base);
 }
 
